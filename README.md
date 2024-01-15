@@ -10,6 +10,7 @@ The loader runs until the page content is fully loaded. It is then removed from 
 - [Accessibility](#accessibility)
   - [Screen Reader Accessibility](#screen-reader-accessibility)
   - [User Preference: Reduced Motion](#user-preference-reduced-motion)
+  - [WAVE Web Accessibility Evaluation Tools Report](#wave-web-accessibility-evaluation-tools-report)
 - [Testing](#testing)
   - [To Disable Animations (Chrome, Windows 10)](#to-disable-animations-chrome-windows-10)
   - [To re-enable animations](#to-re-enable-animations)
@@ -61,6 +62,10 @@ All animation/transition CSS is wrapped inside:
 This ensures that if `prefers-reduced-motion` has _**not**_ been set, the animation will run.
 
 If it _**has**_ been set, fallback CSS will display a static message.
+
+### WAVE Web Accessibility Evaluation Tools Report
+
+- [Automated accessibility analysis results](https://wave.webaim.org/report#/https://chrisnajman.github.io/loader/)
 
 ---
 
