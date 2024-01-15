@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <meta name="description"
+        content="CSS and JavaScript page loader which displays an animation or a loading message, depending on the user's preferences." />
+
+    <title>Loader</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script type="module" src="./js/index.js"></script>
+
+</head>
+
+<body id="top">
+    <div id="loader" class="loader"><span class="visually-hidden">The page is loading...</span></div>
+    <p class="visually-hidden" aria-hidden="true" id="page-loaded"></p>
+    <a href="#main-content" class="element-invisible element-focusable skip-link">Skip to main content</a>
+    <form id="theme-picker" class="theme-picker">
+        <button type="button" id="btn-theme-toggle" class="btn-theme-toggle" aria-pressed>
+            <svg role="img" class="theme-icon" id="theme-darkmode">
+                <use href="./img/sprite.svg#moon"></use>
+            </svg>
+            <svg role="img" class="theme-icon hide" id="theme-lightmode">
+                <use href="./img/sprite.svg#sun"></use>
+            </svg>
+            <span>Dark Mode:</span> <span id="mode" class="mode"></span>
+            <span class="btn-theme-state" aria-hidden="true"></span>
+        </button>
+    </form>
+    <div class="page-layout">
+        <header class="page-header">
+            <svg role="img" class="icon icon-logo">
+                <use href="./img/sprite.svg#icon-logo"></use>
+            </svg>
+            <h1>Loader</h1>
+            <p>The loader runs until the page content is fully loaded. It is then is removed from the DOM.</p>
+            <p>Refresh the page to trigger the loader.</p>
+        </header>
+        <main class="main" id="main-content">
+            <article class="article">
+                <h2>Description</h2>
+                <ul>
+                    <li><b>If user-preferences allow animations</b>:
+                        <ul>
+                            <li>Display loading animation.</li>
+                        </ul>
+                    </li>
+                    <li><b>Else</b>:
+                        <ul>
+                            <li>Display static text: "Loading...".</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>To Disable Animations (Chrome, Windows 10):</h3>
+                <ol>
+                    <li>Open inspector,</li>
+                    <li><code>Ctrl+Shift+P</code>,</li>
+                    <li><code>Run&gt;</code>. Type 'reduce',</li>
+                    <li>Click 'Rendering' on 'Emulate CSS prefers-reduced-motion <b>reduce</b>',</li>
+                    <li>Refresh the page.</li>
+                </ol>
+                <h3>To re-enable animations:</h3>
+                <ul>
+                    <li>Follow steps 1-3 then,</li>
+                    <li>Click 'Rendering' on 'Emulate CSS prefers-reduced-motion',</li>
+                    <li>Refresh the page.</li>
+                </ul>
+            </article>
+        </main>
+        <footer class="page-footer">
+            <ul role="list">
+                <li><a href="https://github.com/chrisnajman/loader" target="_blank" rel="noopener noreferrer">GitHub
+                        Repository</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>
