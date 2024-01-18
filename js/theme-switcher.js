@@ -1,5 +1,5 @@
 export default function themeSwitcher() {
-  const LOCAL_STORAGE_PREFIX = "HAMBURGER-MENU"
+  const LOCAL_STORAGE_PREFIX = "LOADER"
   const MODE_STORAGE_KEY = `${LOCAL_STORAGE_PREFIX}-switcher`
 
   const btnThemeToggle = document.getElementById("btn-theme-toggle")
