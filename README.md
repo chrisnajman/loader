@@ -209,5 +209,4 @@ loader.addEventListener("transitionend", () => {
 
 as the former triggered a console error:
 
-> [!NOTE]
-> Uncaught DOM Exception: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+> **Uncaught DOM Exception**: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
