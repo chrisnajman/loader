@@ -33,14 +33,14 @@ The loader runs until the page content is fully loaded. It is then removed from 
 
 ### Screen Reader Accessibility
 
-The HTML contains text only accessible by screen readers:
+The HTML contains text only accessible by screen readers to ensure that users with visual impairments are notified about the loading state of the page. This is achieved by using the `aria-live="polite"` attribute, which ensures that the screen reader will announce updates without interrupting the user.
 
 ```HTML
 <div id="loader" class="loader">
   <span class="visually-hidden">The page is loading...</span>
 </div>
 
-<p class="visually-hidden" aria-hidden="true" id="page-loaded"></p>
+<p class="visually-hidden"  aria-live="polite" aria-hidden="true" id="page-loaded"></p>
 ```
 
 After the page has loaded (and the loader has been removed from the DOM), `p id="page-loaded"` is rendered as:
